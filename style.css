@@ -159,3 +159,59 @@ button {
   font-size: 2.4rem;
   font-weight: 700;
 }
+.result-status {
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 999px;
+}
+
+.result-status.pass {
+  color: var(--color-pass);
+  background: #e7f5ec;
+}
+
+.result-status.fail {
+  color: var(--color-fail);
+  background: var(--color-error-bg);
+}
+
+.result-details {
+  display: flex;
+  gap: 32px;
+  margin-top: 16px;
+}
+
+.detail-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.detail-label {
+  font-size: 0.8rem;
+  color: var(--color-muted);
+}
+
+.detail-value {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.breakdown {
+  margin-top: 20px;
+  border-top: 1px solid var(--color-border);
+  padding-top: 16px;
+  font-size: 0.88rem;
+  color: var(--color-muted);
+}
+
+.breakdown p {
+  margin: 4px 0;
+}
+
+.site-footer {
+  text-align: center;
+  color: var(--color-muted);
+  font-size: 0.85rem;
+  padding: 24px 20px 40px;
+}
