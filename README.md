@@ -60,4 +60,4 @@ A simple browser-based tool that calculates a student's overall percentage, lett
 
 ## Authors
 
-Muhammad Murtaza —  Muhammad Khizar —  Muhammad Mubeen
+Muhammad Murtaza (0553) —  Muhammad Khizar (0574) —  Muhammad Mubeen (0545)
