@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Grade Calculator</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <h1>Student Grade Calculator</h1>
+  <p class="subtitle">Enter your marks and weightages to get your percentage, letter grade, and GPA.</p>
+</header>
+
+<main class="container">
+
+  <form id="gradeForm" novalidate>
+
+    <!-- One row per assessment component: obtained marks, max marks, weight % -->
+    <div class="table-wrap">
+      <table id="gradeTable">
+        <thead>
+          <tr>
+            <th>Component</th>
+            <th>Marks Obtained</th>
+            <th>Total Marks</th>
+            <th>Weightage (%)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr data-row="assignments">
+            <td><label for="assignments-obtained">Assignments</label></td>
+            <td><input type="number" id="assignments-obtained" min="0" step="any" required></td>
+            <td><input type="number" id="assignments-total" min="0" step="any" value="100" required></td>
+            <td><input type="number" id="assignments-weight" min="0" max="100" step="any" value="15" required></td>
+          </tr>
+          <tr data-row="quizzes">
+            <td><label for="quizzes-obtained">Quizzes</label></td>
+            <td><input type="number" id="quizzes-obtained" min="0" step="any" required></td>
+            <td><input type="number" id="quizzes-total" min="0" step="any" value="100" required></td>
+            <td><input type="number" id="quizzes-weight" min="0" max="100" step="any" value="10" required></td>
+          </tr>
+          <tr data-row="midterm">
+            <td><label for="midterm-obtained">Midterm</label></td>
+            <td><input type="number" id="midterm-obtained" min="0" step="any" required></td>
+            <td><input type="number" id="midterm-total" min="0" step="any" value="100" required></td>
+            <td><input type="number" id="midterm-weight" min="0" max="100" step="any" value="30" required></td>
+          </tr>
+          <tr data-row="final">
+            <td><label for="final-obtained">Final Exam</label></td>
+            <td><input type="number" id="final-obtained" min="0" step="any" required></td>
+            <td><input type="number" id="final-total" min="0" step="any" value="100" required></td>
+            <td><input type="number" id="final-weight" min="0" max="100" step="any" value="45" required></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="weight-note">Make sure the weight adds upto 100% or it will not work.</p>
+
+    <div id="errorBox" class="error-box" role="alert" hidden></div>
+
+    <div class="actions">
+      <button type="submit" class="btn-primary">Calculate Grade</button>
+      <button type="reset" class="btn-secondary">Reset</button>
+    </div>
+  </form>
+
+  <section id="resultSection" class="result-section" hidden aria-live="polite">
+    <div class="result-card">
+      <div class="result-main">
+        <span class="result-percentage" id="resultPercentage">0%</span>
+        <span class="result-status" id="resultStatus">Pass</span>
+      </div>
+      <div class="result-details">
+        <div class="detail-item">
+          <span class="detail-label">Letter Grade</span>
+          <span class="detail-value" id="resultLetter">-</span>
+        </div>
+        <div class="detail-item">
+          <span class="detail-label">GPA</span>
+          <span class="detail-value" id="resultGpa">-</span>
+        </div>
+      </div>
+      <div class="breakdown" id="resultBreakdown"></div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <p>Made By Murtaza &mdash; Khizr &mdash; Mubeen</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
