@@ -7,3 +7,51 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header class="site-header">
+  <h1>Student Grade Calculator</h1>
+  <p class="subtitle">Enter your marks and weightages to get your percentage, letter grade, and GPA.</p>
+</header>
+
+<main class="container">
+
+  <form id="gradeForm" novalidate>
+
+    <!-- One row per assessment component: obtained marks, max marks, weight % -->
+    <div class="table-wrap">
+      <table id="gradeTable">
+        <thead>
+          <tr>
+            <th>Component</th>
+            <th>Marks Obtained</th>
+            <th>Total Marks</th>
+            <th>Weightage (%)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr data-row="assignments">
+            <td><label for="assignments-obtained">Assignments</label></td>
+            <td><input type="number" id="assignments-obtained" min="0" step="any" required></td>
+            <td><input type="number" id="assignments-total" min="0" step="any" value="100" required></td>
+            <td><input type="number" id="assignments-weight" min="0" max="100" step="any" value="15" required></td>
+          </tr>
+          <tr data-row="quizzes">
+            <td><label for="quizzes-obtained">Quizzes</label></td>
+            <td><input type="number" id="quizzes-obtained" min="0" step="any" required></td>
+            <td><input type="number" id="quizzes-total" min="0" step="any" value="100" required></td>
+            <td><input type="number" id="quizzes-weight" min="0" max="100" step="any" value="10" required></td>
+          </tr>
+          <tr data-row="midterm">
+            <td><label for="midterm-obtained">Midterm</label></td>
+            <td><input type="number" id="midterm-obtained" min="0" step="any" required></td>
+            <td><input type="number" id="midterm-total" min="0" step="any" value="100" required></td>
+            <td><input type="number" id="midterm-weight" min="0" max="100" step="any" value="30" required></td>
+          </tr>
+          <tr data-row="final">
+            <td><label for="final-obtained">Final Exam</label></td>
+            <td><input type="number" id="final-obtained" min="0" step="any" required></td>
+            <td><input type="number" id="final-total" min="0" step="any" value="100" required></td>
+            <td><input type="number" id="final-weight" min="0" max="100" step="any" value="45" required></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
