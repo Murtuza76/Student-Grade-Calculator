@@ -59,3 +59,103 @@ table {
   border-collapse: collapse;
   min-width: 480px;
 }
+th, td {
+  padding: 12px 14px;
+  text-align: left;
+  border-bottom: 1px solid var(--color-border);
+}
+
+th {
+  font-size: 0.85rem;
+  color: var(--color-muted);
+  font-weight: 600;
+}
+
+tbody tr:last-child td {
+  border-bottom: none;
+}
+
+input[type="number"] {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+input[type="number"]:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 1px;
+}
+
+.weight-note {
+  font-size: 0.85rem;
+  color: var(--color-muted);
+  margin: 12px 2px 0;
+}
+
+.error-box {
+  margin-top: 16px;
+  padding: 12px 14px;
+  background: var(--color-error-bg);
+  border: 1px solid var(--color-fail);
+  color: var(--color-fail);
+  border-radius: var(--radius);
+  font-size: 0.9rem;
+}
+
+.actions {
+  margin-top: 20px;
+  display: flex;
+  gap: 12px;
+}
+
+button {
+  font-size: 0.95rem;
+  padding: 11px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+.btn-primary {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: var(--color-primary-dark);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--color-text);
+  border-color: var(--color-border);
+}
+
+.btn-secondary:hover {
+  background: #eceef1;
+}
+
+.result-section {
+  margin-top: 28px;
+}
+
+.result-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 24px;
+}
+
+.result-main {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.result-percentage {
+  font-size: 2.4rem;
+  font-weight: 700;
+}
