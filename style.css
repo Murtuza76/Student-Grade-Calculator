@@ -215,3 +215,12 @@ button {
   font-size: 0.85rem;
   padding: 24px 20px 40px;
 }
+
+@media (max-width: 480px) {
+  .result-details {
+    gap: 20px;
+  }
+  .result-percentage {
+    font-size: 2rem;
+  }
+}
